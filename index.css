@@ -33,20 +33,39 @@ nav {
     justify-content: space-between;
     align-items: center;
     color: white;
-    padding: 20px 10vw;
+    padding: 20px 8vw;
     border: 1px solid rgb(158, 158, 158);
 }
 
-nav h1{
+nav h1 {
     font-size: 40px;
     font-weight: 900;
     cursor: pointer;
 }
 
+nav h1 span{
+    color: var(--second-color);
+}
+
+nav .search_container {
+    border: 1px solid rgb(133, 133, 133);
+    border-radius: 20px;
+    padding: 1px 12px;
+}
+
+nav .search_container input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+nav .search_container input::placeholder{
+    color: white;
+} 
+
 nav ul {
     list-style-type: none;
-    margin-right: auto;
-    margin-left: calc(100% / 9);
     cursor: pointer;
 }
 
@@ -55,23 +74,51 @@ nav ul li {
     border-bottom: 2px solid transparent;
     margin: 0 10px;
     transition: 0.3s;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 100;
 }
 
 nav ul li:hover {
     border-bottom-color: var(--second-color);
 }
-nav .nav_icons{
+
+nav .nav_icons {
     cursor: pointer;
 }
-nav .nav_icons i{
+
+nav .nav_icons i {
     margin: 0 5px;
 }
-nav .nav_icons i:hover{
+
+nav .nav_icons i:hover {
     color: var(--second-color);
 }
 
-nav .fa-bars{
-    
+nav .fa-bars {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav .fa-bars:hover {
+    color: var(--second-color);
+}
+
+@media screen and (max-width:800px) {
+
+    nav{
+        padding: 15px 5vw;
+    }
+    nav h1{
+        font-size: 30px;
+    }
+    nav ul,
+    nav .nav_icons {
+        display: none;
+    }
+
+    nav .fa-bars {
+        display: block;
+    }
 }
