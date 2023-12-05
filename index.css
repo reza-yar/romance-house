@@ -25,7 +25,10 @@
 header {
     width: 100%;
     height: 100vh;
-    background-color: var(--back-color);
+    /* background-color: var(--back-color); */
+    background-image: url('sofa.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 nav {
@@ -35,6 +38,7 @@ nav {
     color: white;
     padding: 20px 8vw;
     border: 1px solid rgb(158, 158, 158);
+    background-color: rgba(0, 0, 0, 0.441);
 }
 
 nav h1 {
@@ -81,7 +85,10 @@ nav ul li {
 nav ul li:hover {
     border-bottom-color: var(--second-color);
 }
-
+nav a{
+    text-decoration: none;
+    color: white;
+}
 nav .nav_icons {
     cursor: pointer;
 }
