@@ -41,13 +41,25 @@ nav {
     background-color: rgba(0, 0, 0, 0.441);
 }
 
-nav h1 {
+nav .title_container {
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+nav .title_container h1 {
     font-size: 40px;
     font-weight: 900;
     cursor: pointer;
 }
 
-nav h1 span {
+nav .title_container h2,
+nav .title_container h2 span {
+    font-family: monospace;
+    letter-spacing: 5px;
+    text-transform: capitalize;
+}
+
+nav span {
     color: var(--second-color);
 }
 
@@ -85,10 +97,12 @@ nav ul li {
 nav ul li:hover {
     border-bottom-color: var(--second-color);
 }
-nav a{
+
+nav a {
     text-decoration: none;
     color: white;
 }
+
 nav .nav_icons {
     cursor: pointer;
 }
@@ -137,10 +151,12 @@ nav .fa-bars:hover {
         flex-direction: column;
         padding: 0;
     }
-    nav h1{
+
+    nav h1 {
         padding: 0;
     }
-    nav>*{
+
+    nav>* {
         margin-bottom: 20px;
     }
 }
