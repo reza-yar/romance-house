@@ -9,5 +9,5 @@ window.addEventListener('load', () => {
         site_container.style.overflowY = 'auto';
         titel_h1.style.animation = 'title_anime 2s';
         titel_h2.style.animation = 'title_anime_2 2s';
-    }, 3000)
+    }, 1000)
 })
