@@ -179,10 +179,11 @@ nav .fa-bars:hover {
 
 
 .intro {
-    /* border: 1px solid red; */
-    margin: 100px 5vw;
+    /* border: 1px solid red; */  
     color: white;
-
+    display: flex;
+    justify-content: center;
+    gap: 50px;
 }
 
 .intro h1 {
@@ -210,10 +211,10 @@ nav .fa-bars:hover {
     cursor: pointer;
 }
 
-.intro button:hover{
+.intro button:hover {
     background-color: var(--second-color);
     border-color: var(--second-color);
-    color:var(--back-color)
+    color: var(--back-color)
 }
 
 @media screen and (max-width:900px) {
