@@ -179,21 +179,27 @@ nav .fa-bars:hover {
 
 
 .intro {
-    /* border: 1px solid red; */  
+    /* border: 1px solid red; */
     color: white;
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 3vw;
 }
 
+.intro>* {
+    /* border: 1px solid red; */
+}
+.intro>div{
+    width: 50%;
+}
 .intro h1 {
-    font-size: 80px;
+    font-size: 60px;
     color: white;
     /* line-height:90px; */
 }
 
 .intro p {
-    width: 500px;
+    /* width: 500px; */
     line-height: 20px;
     text-align: justify;
     margin-bottom: 30px;
@@ -217,6 +223,12 @@ nav .fa-bars:hover {
     color: var(--back-color)
 }
 
+.intro img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
 @media screen and (max-width:900px) {
 
     nav {
@@ -235,11 +247,25 @@ nav .fa-bars:hover {
     nav .fa-bars {
         display: block;
     }
+
+    .intro {
+        gap: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro>div{
+        width: 80%;
+    }
+
+    .intro h1{
+        font-size: 8vw;
+    }
 }
 
 @media all and (max-width:470px) {
     nav {
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 0;
     }
 
