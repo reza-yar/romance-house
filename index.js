@@ -1,3 +1,6 @@
+import { NavbarClass } from "./components/navbar/navbar.js";
+window.customElements.define('navbar-comp', NavbarClass);
+
 let onload_page = document.getElementById('onload_page');
 let titel_h1 = document.getElementById('title_h1');
 let titel_h2 = document.getElementById('title_h2');
