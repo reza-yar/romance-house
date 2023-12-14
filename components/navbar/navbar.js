@@ -42,9 +42,17 @@ class NavbarClass extends HTMLElement {
         super()
 
         this.attachShadow({mode:'open'});
-        this.shadowRoot.appendChild(template.content.cloneNode(true))
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
 
+        console.log(window);
+        window.addEventListener('load',()=>{
+            setTimeout(function(){
+                console.log('lllll');
+            },3000)
+        })
+        this.shadowRoot.querySelector('.title_container h1').style.transform = 'translateX(100px)'
     }
+    
 
 }
 

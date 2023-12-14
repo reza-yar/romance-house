@@ -75,7 +75,7 @@ header {
 .intro h1 {
     font-size: 60px;
     color: white;
-    /* line-height:90px; */
+    color: var(--second-color);
 }
 
 .intro p {
@@ -111,22 +111,7 @@ header {
 
 @media screen and (max-width:900px) {
 
-    nav {
-        padding: 15px 5vw;
-    }
-
-    nav h1 {
-        font-size: 30px;
-    }
-
-    nav ul,
-    nav .nav_icons {
-        display: none;
-    }
-
-    nav .fa-bars {
-        display: block;
-    }
+   
 
     .intro {
         gap: 0;
@@ -144,16 +129,5 @@ header {
 }
 
 @media all and (max-width:470px) {
-    nav {
-        flex-direction: column-reverse;
-        padding: 0;
-    }
-
-    nav h1 {
-        padding: 0;
-    }
-
-    nav>* {
-        margin: 10px;
-    }
+    
 }

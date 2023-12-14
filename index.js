@@ -9,8 +9,8 @@ let site_container = document.querySelector('.site_container');
 window.addEventListener('load', () => {
     setTimeout(function () {
         onload_page.style.display = 'none';
-        site_container.style.overflowY = 'auto';
-        titel_h1.style.animation = 'title_anime 2s';
-        titel_h2.style.animation = 'title_anime_2 2s';
+        // site_container.style.overflowY = 'auto';
+        // titel_h1.style.animation = 'title_anime 2s';
+        // titel_h2.style.animation = 'title_anime_2 2s';
     }, 1000)
 })
