@@ -4,7 +4,14 @@ template.innerHTML = `
 <link rel="stylesheet" href="fa-fa/css/all.min.css">
 <nav>
 
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars">
+                  <div id="dropDown_menu" class="hide">
+                    <a href="">خانه</a>
+                    <a href="">درباره ما</a>
+                    <a href="">خدمات</a>
+                    <a href="page_aboutUs/about_us.html">تماس با ما</a>
+                  </div>
+                </i>
 
                 <div class="nav_icons">
                     <i class="fa fa-user"></i>
@@ -41,21 +48,50 @@ class NavbarClass extends HTMLElement {
 
         super()
 
-        this.attachShadow({mode:'open'});
+        this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-        console.log(window);
-        window.addEventListener('load',()=>{
-            setTimeout(function(){
-                console.log('lllll');
-            },3000)
+        let bars_icon = this.shadowRoot.querySelector('.fa-bars');
+        let bars_dropDown_menu = this.shadowRoot.getElementById('dropDown_menu');
+
+        function dropDown_menu_animation(a) {
+            a.style.transform = 'translateX(0)';
+            a.style.opacity = 1;
+        }
+
+        bars_icon.addEventListener('click', () => {
+            bars_dropDown_menu.classList.toggle('hide');
+
+            if (bars_dropDown_menu.classList.contains('hide')) {
+                bars_dropDown_menu.querySelectorAll('a').forEach((a, index) => {
+                    a.style.transform = 'translateX(-200px)';
+                    a.style.opacity = 0;
+                })
+            } else {
+                bars_dropDown_menu.querySelectorAll('a').forEach((a, index) => {
+
+                    setTimeout(() => { dropDown_menu_animation(a) }, (index + 1) * 100)
+
+                })
+            }
+
+
+
         })
-        this.shadowRoot.querySelector('.title_container h1').style.transform = 'translateX(100px)'
+
+        console.log(window);
+        window.addEventListener('load', () => {
+            setTimeout(function () {
+                console.log('lllll');
+            }, 3000)
+        })
+        // this.shadowRoot.querySelector('.title_container h1').style.transform = 'translateX(100px)';
+
     }
-    
+
 
 }
 
 
 
-export {NavbarClass}
+export { NavbarClass }

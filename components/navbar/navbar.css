@@ -15,15 +15,13 @@ nav .title_container {
 
 }
 
-nav .title_container>*{
-    transition: 5s;
-}
+nav .title_container>* {}
 
 
 nav .title_container h1 {
     font-size: 40px;
     font-weight: 900;
-    
+
 }
 
 nav .title_container h2,
@@ -35,7 +33,7 @@ nav .title_container h2 span {
 
 }
 
-@keyframes title_anime {
+/* @keyframes title_anime {
     0% {
         transform: translateX(100px);
         opacity: 0;
@@ -57,7 +55,7 @@ nav .title_container h2 span {
         transform: translateX(0);
         opacity: 1;
     }
-}
+} */
 
 nav span {
     color: var(--second-color);
@@ -98,6 +96,8 @@ nav ul li:hover {
     border-bottom-color: var(--second-color);
 }
 
+
+
 nav a {
     text-decoration: none;
     color: white;
@@ -116,15 +116,38 @@ nav .nav_icons i:hover {
 }
 
 nav .fa-bars {
+    /* position: relative; */
     display: none;
     font-size: 25px;
     cursor: pointer;
     transition: 0.3s;
 }
 
+nav .fa-bars div {
+    position: absolute;
+    /* border: 1px solid red; */
+}
+
+.hide{
+    display: none;
+}
+
+nav .fa-bars div a{
+    background-color: rgb(166, 166, 166);
+    color: var(--second-color);
+    display: block;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: 0.3s;
+}
+
 nav .fa-bars:hover {
     color: var(--second-color);
 }
+
+
 
 @media screen and (max-width:950px) {
     nav {
@@ -140,12 +163,14 @@ nav .fa-bars:hover {
         display: none;
     }
 }
-@media screen and (max-width:500px){
-    nav{
+
+@media screen and (max-width:500px) {
+    nav {
         padding: 0;
         flex-direction: column-reverse;
     }
-    nav>*{
+
+    nav>* {
         margin-bottom: 20px;
     }
 }
