@@ -2,3 +2,9 @@
 .product{
     border: 1px solid red;
 }
+
+.product>img{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}

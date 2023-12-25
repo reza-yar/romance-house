@@ -63,8 +63,16 @@ let products_fragment = document.createDocumentFragment();
 fetch('https://romancehouse-e1018-default-rtdb.firebaseio.com/sofa.json')
     .then(res => res.json())
     .then(data => {
+        let s
+        Object.entries(data).forEach(a => {
+            console.log(a[1].name);
+            s = document.createElement('div');
+            s.innerHTML = `<product-container productName=${a[1].name} productPic=${a[1].pic}></product-container>`
+            products_fragment.append(s);
+            console.log(s);
 
-        Object.entries(data).forEach(a => console.log(a))
+        })
+        products_container.append(products_fragment)
 
     })
 
