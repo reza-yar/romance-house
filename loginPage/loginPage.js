@@ -1,28 +1,43 @@
-let username_input = document.getElementById('input_name');
-let userfamily_input = document.getElementById('input_family');
-let userusername_input = document.getElementById('input_username');
-let userpassword_input = document.getElementById('input_password');
+let name_input = document.getElementById('input_name');
+let family_input = document.getElementById('input_family');
+let username_input = document.getElementById('input_username');
+let password_input = document.getElementById('input_password');
 
 let send_btn = document.querySelector('button');
 
+let is_username_exist;
+username_input.addEventListener('keyup', (event) => {
+    console.log('change');
+    fetch('https://romancehouse-e1018-default-rtdb.firebaseio.com/users.json')
+        .then(res => res.json())
+        .then(data => {
+
+            is_username_exist = Object.entries(data).some(a => {
+                return a[1].username == event.target.value 
+                // console.log(a[1].username, event.target.value, is_username_exist);
+            })
+            is_username_exist && alert('این نام کاربری توسط فرد دیگری ذخیره شده');
+        })
+})
+
 function UserInfo(name, family, username, password) {
 
-    this.username = name;
-    this.userfamily = family;
+    this.name = name;
+    this.family = family;
     this.username = username;
-    this.userpassword = password;
+    this.password = password;
 
 }
 
 // let newUser = {name:'ytyt',family:'787'}
 
-function fetch_send() {
+function fetch_send(a) {
 
     fetch('https://romancehouse-e1018-default-rtdb.firebaseio.com/users.json',
         {
             method: 'POST',
             headers: { 'Content-type': 'application/json' },
-            body: JSON.stringify(newUser)
+            body: JSON.stringify(a)
 
         })
         .then(res => console.log(res))
@@ -34,19 +49,12 @@ send_btn.addEventListener('click', (event) => {
     event.preventDefault();
 
     let newUser = new UserInfo(
+        name_input.value,
+        family_input.value,
         username_input.value,
-        userfamily_input.value,
-        userusername_input.value,
-        userpassword_input.value,
+        password_input.value,
     )
 
-    fetch('https://romancehouse-e1018-default-rtdb.firebaseio.com/users.json')
-        .then(res => res.json())
-        .then(data => {
-            console.log(Object.entries(data).length);
-        })
-        
-
-
+    fetch_send(newUser)
 
 })
