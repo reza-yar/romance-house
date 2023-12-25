@@ -13,10 +13,10 @@ username_input.addEventListener('keyup', (event) => {
         .then(data => {
 
             is_username_exist = Object.entries(data).some(a => {
-                return a[1].username == event.target.value 
+                return a[1].username == event.target.value
                 // console.log(a[1].username, event.target.value, is_username_exist);
             })
-            is_username_exist && alert('این نام کاربری توسط فرد دیگری ذخیره شده');
+            // is_username_exist && alert('این نام کاربری توسط فرد دیگری ذخیره شده');
         })
 })
 
@@ -55,6 +55,14 @@ send_btn.addEventListener('click', (event) => {
         password_input.value,
     )
 
-    fetch_send(newUser)
+    if (name_input.value && family_input.value && username_input.value && password_input.value && !is_username_exist) {
+        fetch_send(newUser);
+        console.log('داده های شما ارسال شد');
+    }else{
+        console.log('not sent');
+    }
+
+
+
 
 })

@@ -23,18 +23,22 @@ img {
     object-fit: cover;
 }
 
-.user_off , .user_in{
+.user_off,
+.user_in {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.hide{
+.hide {
     display: none;
 }
-.products_container{
+
+.products_container {
+    height: 100vh;
+    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:20px;
+    gap: 20px;
 }
