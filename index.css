@@ -18,3 +18,41 @@ header {
     background-size: cover;
 }
 
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.562);
+    backdrop-filter: blur(5px);
+}
+nav>.title_container{
+    margin-left: auto;
+    line-height: 20px;
+}
+nav>.title_container>p{
+    border-bottom: 1px solid white;
+    text-align: justify;
+}
+nav>.title_container>h1{
+    text-align: center;
+}
+
+nav>.cart_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav>.social_container , nav>.cart_container , nav>i {
+    margin-right: 50px;
+}
+
+nav>.social_container>i{
+    margin: 0 10px;
+}
+
+nav>.login_signup_container>button{
+
+}
