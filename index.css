@@ -3,11 +3,16 @@
     src: url('Far.Homa.ttf');
 }
 
+:root {
+    --mainColor: yellow;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: homa;
+    font-weight: 100;
 }
 
 header {
@@ -18,41 +23,140 @@ header {
     background-size: cover;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 100px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.562);
+    background-color: rgba(0, 0, 0, 0.356);
     backdrop-filter: blur(5px);
 }
-nav>.title_container{
+
+nav>.title_container {
     margin-left: auto;
     line-height: 20px;
 }
-nav>.title_container>p{
+
+nav>.title_container>p {
     border-bottom: 1px solid white;
     text-align: justify;
 }
-nav>.title_container>h1{
+
+nav>.title_container>h1 {
     text-align: center;
 }
 
-nav>.cart_container{
+nav>.cart_container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-nav>.social_container , nav>.cart_container , nav>i {
-    margin-right: 50px;
+nav>.social_container,
+nav>.cart_container,
+nav>i {
+    margin-right: 70px;
 }
 
-nav>.social_container>i{
+nav>.social_container>i {
     margin: 0 10px;
 }
 
-nav>.login_signup_container>button{
-
+nav>.login_signup_container>button {
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
 }
+
+nav>.cart_container>* {
+    margin: 0 5px;
+}
+
+.box {
+    position: relative;
+    width: 50vw;
+    height: 300px;
+    border: 8px solid var(--mainColor);
+    border-radius: 3px;
+    margin: 80px auto;
+    color: rgb(255, 255, 255);
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box>i{
+    font-size: 40px;
+    color: var(--mainColor);
+}
+.box>.header_and_arrow {
+    display: flex;
+    align-items: center;
+}
+
+.box>.box_infos {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.box>.box_infos>* {
+    margin: 0 20px;
+}
+
+.box>.box_infos>.couch_price>span {
+    position: relative;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.box>.box_infos>.couch_price>span::before {
+    position: absolute;
+    content: 'تومان';
+    top: -30%;
+    font-size: 15px;
+}
+
+.box>.box_infos>.addto_cart {
+    display: flex;
+    align-items: center;
+}
+
+.swiper {
+    width: 400PX;
+    height: 300PX;
+    position: absolute;
+    top: 80%;
+    
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    background: none;
+  }
+  .swiper_btn{
+    position: relative;
+    color: var(--mainColor);
+    /* outline: none;
+    border: none; */
+    font-size: 15px;
+    margin: 0 20px;
+
+  }

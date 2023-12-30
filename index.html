@@ -4,47 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+
     <link rel="stylesheet" href="fa-fa/css/all.min.css">
+    <link rel="stylesheet" href="swiper-11.0.5/package/swiper-bundle.min.css">
+    <link rel="stylesheet" href="index.css">
     <title>Romanse house</title>
 </head>
 
 <body>
 
-   
-<header>
 
-    <nav>
-        <div class="title_container">
-            <p>هر خانه ای زیبا میشود با</p>
-            <h1>خانه رویایی</ا>
-        </div>
-        <div class="login_signup_container">
-            <button>ثبت نام</button>
-            <span>/</span>
-            <button>ورود</button>
-        </div>
-        <i class="fa fa-search"></i>
-        <div class="cart_container">
-            <i class="fas fa-cart-arrow-down"></i>
-            <p>00</p>
-            <span>آیتم</span>
-        </div>
-        <div class="social_container">
-            <i class="fab fa-pinterest-p"></i>
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
+    <header>
+
+        <nav>
+            <div class="title_container">
+                <p>هر خانه ای زیبا میشود با</p>
+                <h1>خانه رویایی</ا>
+            </div>
+            <div class="login_signup_container">
+                <button>ثبت نام</button>
+                <span>/</span>
+                <button>ورود</button>
+            </div>
+            <i class="fa fa-search"></i>
+            <div class="cart_container">
+                <i class="fas fa-cart-arrow-down"></i>
+                <p>00</p>
+                <span>آیتم</span>
+            </div>
+            <div class="social_container">
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+
+        </nav>
+
+        <div class="box">
+            <i class="fab fa-dropbox"></i>
+            <div class="header_and_arrow">
+
+                <div class="swiper_btn1 swiper_btn">
+                    <i class="	far fa-arrow-alt-circle-right "></i>
+                </div>
+                <h1>جدیدترین محصولات</h1>
+
+                <div class="swiper_btn2 swiper_btn">
+                    <i class="	far fa-arrow-alt-circle-left"></i>
+                </div>
+
+            </div>
+
+            <div class="box_infos">
+                <i class="	fas fa-couch"></i>
+                <div class="couch_name">
+                    <h3>نام مبل</h3>
+                    <div class="couch_description">
+                        <span>رنگ</span>
+                        /
+                        <span>مدل مبل</span>
+                    </div>
+                </div>
+                <div class="couch_price">
+                    <i class="	fa fa-tag"></i>
+
+                    <span>38000000</span>
+
+                </div>
+                <div class="addto_cart">
+                    <i class="fas fa-cart-arrow-down"></i>
+                    <p>اضافه کردن به سبد خرید</p>
+                </div>
+            </div>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide">
+                        <img class="swiper-slide" src="images/—Pngtree—leather sofa_40894.png" alt="">
+                    </div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                </div>
+        
+            </div>
+
         </div>
 
-    </nav>
+    </header>
+
     
-    <div class="box">
 
-    </div>
-
-</header>
-
-    <!-- <script src="login.js"></script> -->
+    <script src="swiper-11.0.5/package/swiper-bundle.min.js"></script>
     <script src="scripts/fetch.js"></script>
     <script type="module" src="index.js"></script>
 
